@@ -1,0 +1,155 @@
+.form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 40%;
+  bottom: 30%;
+  border: 1px solid #fff;
+  width: 20rem;
+  height: 25rem;
+}
+
+label {
+  width: auto;
+}
+
+input{
+    padding: 8px 35px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff54;
+}
+
+input::placeholder{
+    color: #00000088;
+    font-weight: 600;
+}
+
+.h2Form {
+  color: #fff;
+  font-size: 3rem;
+  margin: 20px;
+}
+
+.imgAtardecer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.btnSubmit {
+  margin-top: 25px;
+  border: none;
+  background: #ffffff80;
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.733);
+  border-radius: 6px;
+  font-size: 1.2rem;
+  padding: 1px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnSubmit:active {
+  box-shadow: inset 0 0 5px 5px rgba(220, 220, 220, 0.633);
+}
+
+.btnBack {
+  text-decoration: none;
+  margin-top: 25px;
+  border: none;
+  color: black;
+  background: #ffffff65;
+  box-shadow: 0 0 5px 2px rgba(66, 66, 66, 0.645);
+  border-radius: 6px;
+  font-size: 1.2rem;
+  padding: 0px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.imgLogIn{
+    position: absolute;
+    width: 20%;
+    height: 15%;
+    z-index: 100;
+    left: 1rem;
+    top: .5rem;
+}
+
+p{
+  font-size: 1rem;
+  margin: 0px;
+  color: rgb(162, 0, 0);
+  margin-bottom: 20px;
+}
+
+.containerMain {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.btnAbout {
+  border-radius: 25px;
+  position: absolute;
+  right: 100px;
+  top: 30px;
+  z-index: 5;
+  background-color: #04aa6d88;
+  color: white;
+  border: none;
+  padding: 3px 16px;
+  font-size: 1.7rem;
+}
+
+.btnAbout:hover{
+    text-shadow: 0 0 5px #dfd7d7;
+}
+
+span {
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+span:hover {
+  cursor: pointer;
+}
+
+.signUp {
+  border-radius: 25px;
+  position: absolute;
+  right: 230px;
+  top: 30px;
+  z-index: 5;
+  background-color: #04aa6d;
+  color: white;
+  border: none;
+  padding: 3px 16px;
+}
+
+.signUp:hover{
+    background: #038757;
+}
+
+.logIn {
+  border-radius: 25px;
+  position: absolute;
+  right: 134px;
+  top: 30px;
+  z-index: 4;
+  background-color: #ffffff;
+  color: rgb(25, 25, 25);
+  border: none;
+  padding: 3px 66px;
+  padding-right: 16px;
+}
+
+.logIn:hover{
+    background-color: #038757;
+    color: #dfd7d7;
+}
+
+.img {
+  width: 100%;
+}

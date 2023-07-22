@@ -1,0 +1,34 @@
+.nav{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.imgNav{
+    display: flex;
+    position: absolute;
+    width: 20%;
+}
+
+.btnFav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.ulCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    gap: 2rem;
+}
+
+.li{
+    text-decoration: none;
+    list-style: none;
+    display: inline-flex;
+}
+
+.btnLogout{
+    cursor: pointer;
+}
