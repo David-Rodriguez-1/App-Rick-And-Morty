@@ -9,22 +9,22 @@ import { Form } from "./components/Form/Form";
 import { Favorites } from "./components/Favorites/Favorites";
 import Detail from "./components/Detail/Detail";
 
+const URL = 'http//localhost:3001/rickandmorty/'
+
 function App() {
 
   const [characters, setCharacters] = useState([]);
   const [access, setAccess] = useState(false);
   const navigate = useNavigate();
 
-  const EMAIL = "admin@mail.com";
-  const PASSWORD = "Pass123";
 
   function login(userData) {
-    if (userData.password === PASSWORD && userData.email === EMAIL) {
-      setAccess(true);
-      navigate('/cards')
-    } else {
-      alert('Email / Password incorrect')
-    }
+    axios(`${URL}login`)
+      .then(({data}) => {
+        const { access } = data;
+        setAccess(access)
+        access && navigate('/card')
+    })
   }
 
     function logout() {

@@ -13,7 +13,6 @@ export default function Detail() {
   useEffect(() => {
     axios(`http://localhost:3001/rickandmorty/character/${id}`)
       .then(({ data }) => {
-        console.log(data);
         if (data.name) {
           setCharacter(data);
         } else {
