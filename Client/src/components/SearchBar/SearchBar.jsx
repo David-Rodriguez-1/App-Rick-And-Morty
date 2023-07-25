@@ -17,7 +17,7 @@ export default function SearchBar(props) {
   }
 
   return (
-    <search className={style.navContain}>
+    <div className={style.navContain}>
       <form
         className={style.formSearch}
         action="post"
@@ -43,6 +43,6 @@ export default function SearchBar(props) {
         <GiCardRandom className={style.logo} />
       </button>
           </div>
-    </search>
+    </div>
   );
 }

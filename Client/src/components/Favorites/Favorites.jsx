@@ -1,28 +1,30 @@
 import Card from "../Card/Card";
-import { connect, useDispatch } from "react-redux";
-import { useRef } from "react";
-import { filterCards, orderCards } from "../../Redux/actions";
+import React from "react";
+import { connect } from "react-redux";
+// import { useRef } from "react";
+// import {filterCards, orderCards } from "../../Redux/actions";
 
-const styleSelect = {
-  marginRight: "15px",
-  padding: "10px",
-  borderRadius: "5px",
-};
-export function Favorites({ favorites }) {
-  const filter = useRef(null);
-  const order = useRef(null);
+// const styleSelect = {
+//   marginRight: "15px",
+//   padding: "10px",
+//   borderRadius: "5px",
+// };
+export function Favorites(props) {
+  console.log(props);
+  // const filter = useRef(null);
+  // const order = useRef(null);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  function handleReset(e) {
-    dispatch({ type: "RESET" });
-    filter.current.value = "";
-    order.current.value = "";
-  }
+  // function handleReset(e) {
+  //   dispatch({ type: "RESET" });
+  //   filter.current.value = "";
+  //   order.current.value = "";
+  // }
 
   return (
     <>
-      <select
+      {/* <select
         style={styleSelect}
         ref={order}
         onChange={(e) => dispatch(orderCards(e.target.value))}>
@@ -32,7 +34,6 @@ export function Favorites({ favorites }) {
           </option>
         ))}
       </select>
-
       <select
         style={styleSelect}
         ref={filter}
@@ -42,17 +43,14 @@ export function Favorites({ favorites }) {
             {e}
           </option>
         ))}
-      </select>
+      </select> */}
 
-      <button value="reset" onClick={handleReset}>
+      {/* <button value="reset" onClick={handleReset}>
         Reset
-      </button>
-        {favorites.length === 0 ? (
-          <p style={{ color: "violet", marginTop: "150px", fontSize: "24px" }}>
-            ¡Agrega un favorito!
-          </p>
-        ) : (
-          favorites.map((e, i) => (
+      </button> */}
+      <div>
+        {
+          props.myFavorites.map((e) => (
             <Card
               id={e.id}
               name={e.name}
@@ -60,19 +58,18 @@ export function Favorites({ favorites }) {
               gender={e.gender}
               image={e.image}
               onClose={false}
-              fav={true}
-              key={i++}
+              key={e.id}
             />
-          ))
-        )}
+          ))}
+      </div>
     </>
   );
 }
 
-export function mapStateToProps(state) {
+function mapStateToProps(state) {
   return {
-    favorites: state.favorites,
-  };
+    myFavorites: state.myFavorites,
+  }
 }
 
-export default connect(mapStateToProps, null)(Favorites);
+export default connect(mapStateToProps)(Favorites)

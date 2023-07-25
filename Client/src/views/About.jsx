@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
 
-
     return (
       <>
         <Link to={"/"}>
@@ -17,7 +16,7 @@ const About = () => {
           />
         </Link>
         <h1 className={style.h1}>Éste es el about!</h1>
-        <Link to={"/cards"}>
+        <Link to={"/login"}>
           <h5>Back</h5>
         </Link>
       </>

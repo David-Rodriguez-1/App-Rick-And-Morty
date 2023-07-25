@@ -22,7 +22,7 @@ function Nav({ onSearch, logout }) {
           <Link to={"/about"}>
             <li className={style.li}>About</li>
           </Link>
-          <Link to={"/favorites"}>
+          <Link to={"/fav"}>
             <li className={style.li}>Favorites</li>
           </Link>
           <button className={style.btnLogout} onClick={logout}>Log out</button>

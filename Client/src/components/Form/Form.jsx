@@ -11,13 +11,15 @@ export const Form = ({login}) => {
     email: "",
     password: ""
   });
-  const [errors, setErrors] = useState({
-    email: "",
-    password: ""
-  });
+  const [errors, setErrors] = useState({});
+
   const handleChange = (event) => {
-    setUserData({ ...userData, [event.target.name]: event.target.value });
-    setErrors(validate({ ...userData, [event.target.name]: event.target.value }));
+    const nameProperty = event.target.name;
+    const value = event.target.value;
+
+    setUserData({ ...userData, [nameProperty]: value });
+
+    setErrors(validate({ ...userData, [nameProperty]: value }));
   }
 
   const submit = (event) => {
@@ -65,9 +67,6 @@ export const Form = ({login}) => {
         </label>
         <p>{errors.password}</p>
         <button className={style.btnSubmit}>Submit</button>
-        <Link to={"/"} className={style.btnBack}>
-          Back
-        </Link>
       </form>
     </>
   );

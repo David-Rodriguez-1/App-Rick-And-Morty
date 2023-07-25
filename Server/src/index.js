@@ -12,6 +12,6 @@ server.use(express.json())
 
 server.use('/rickandmorty', router)
 
-server.listen(PORT, (req, res) => {
+server.listen(PORT, () => {
   console.log(`Server is listening on port: ${PORT}`);
 })
