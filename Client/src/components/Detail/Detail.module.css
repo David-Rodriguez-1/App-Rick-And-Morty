@@ -1,0 +1,36 @@
+.detailContainer{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cardContainer{
+    display: flex;
+    position: absolute;
+    max-width: fit-content;
+    left: 0;
+    right: 0;
+    top: 0%;
+    bottom: 0;
+    background-color: #888888;
+    && img{
+        border-radius: 20px;
+    }
+}
+
+.Card{
+    display: flex;
+    max-width: fit-content;
+    position: absolute;
+    gap: 1rem;
+    && p{
+        border: 1px solid #636363;
+        border-radius: 5px;
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        color: rgb(228, 242, 255);
+    }
+}

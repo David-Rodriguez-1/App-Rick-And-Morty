@@ -3,11 +3,11 @@ const axios = require("axios");
 const URL = "https://rickandmortyapi.com/api/character/";
 
 const getCharById = (req, res) => {
-  const { id } = req.params;
+  const id = parseInt(req.params.id);
   axios(`${URL}${id}`)
     .then((response) => {
       const { status, name, species, origin, image, gender } = response.data;
-      const character = { id, status, name, species, origin, image, gender };
+      const character = { id, status, name, species, origin, image, gender }
 
       return character.name
         ? res.status(200).json(character)

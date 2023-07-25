@@ -63,7 +63,7 @@
             <img className={style.imgCard} src={image} alt="" />
             <p className={style.status}>{status}</p>
           </div>
-          <Link to={"/detail"} className={style.linkInfo}>
+          <Link to={`/detail/${id}`} className={style.linkInfo}>
             <h2 className={claseDeH2}>{name}</h2>
           </Link>
         </article>
