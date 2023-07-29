@@ -28,13 +28,11 @@ export const Form = ({login}) => {
   }
   return (
     <>
-      <Link to={"/"}>
         <img
           className={style.imgLogIn}
           src="https://www.pngplay.com/wp-content/uploads/14/Rick-And-Morty-Logo-Transparent-File.png"
           alt="Logo-Rick-and-Morty"
         />
-      </Link>
       <img className={style.imgAtardecer} src={imgAtardecer} alt="" />
         <Link to={"/about"}>
           <button className={style.btnAbout}>About</button>

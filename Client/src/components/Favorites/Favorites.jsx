@@ -1,6 +1,7 @@
 import Card from "../Card/Card";
 import React from "react";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
+import { useSelector } from "react-redux";
 // import { useRef } from "react";
 // import {filterCards, orderCards } from "../../Redux/actions";
 
@@ -11,6 +12,9 @@ import { connect } from "react-redux";
 // };
 export function Favorites(props) {
   console.log(props);
+  const myFavorites = useSelector((state) => {
+    return state.myFavorites
+  })
   // const filter = useRef(null);
   // const order = useRef(null);
 
@@ -50,7 +54,7 @@ export function Favorites(props) {
       </button> */}
       <div>
         {
-          props.myFavorites.map((e) => (
+          myFavorites.map((e) => (
             <Card
               id={e.id}
               name={e.name}
@@ -66,10 +70,12 @@ export function Favorites(props) {
   );
 }
 
-function mapStateToProps(state) {
-  return {
-    myFavorites: state.myFavorites,
-  }
-}
+// export function mapStateToProps(state) {
+//   return {
+//     myFavorites: state.myFavorites,
+//   }
+// }
 
-export default connect(mapStateToProps)(Favorites)
+// export default connect(mapStateToProps)(Favorites)
+
+export default Favorites;

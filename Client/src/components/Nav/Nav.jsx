@@ -8,15 +8,13 @@ function Nav({ onSearch, logout }) {
   
     return (
       <nav className={style.nav}>
-        <Link to={"/"}>
           <img
             className={style.imgNav}
             src="https://www.pngplay.com/wp-content/uploads/14/Rick-And-Morty-Logo-Transparent-File.png"
             alt="Logo-Rick-and-Morty"
           />
-        </Link>
         <ul className={style.ulCont}>
-          <Link to={"/"}>
+          <Link to={"/login"}>
             <li className={style.li}>Home</li>
           </Link>
           <Link to={"/about"}>
